@@ -1,0 +1,164 @@
+/*
+Theme Name: verso-medical
+Theme URI: http://underscores.me/
+Author: Underscores.me
+Author URI: http://underscores.me/
+Description: Description
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: verso-medical
+Tags:
+*/
+
+
+body {
+	padding: 0;
+	margin: 0;
+	font-family: 'Pathway Gothic One', sans-serif;
+}
+/*--------------------------------------------------------------
+# Accessibility - 	доступность
+--------------------------------------------------------------*/
+/* Text meant only for screen readers. */
+.screen-reader-text {
+	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute !important;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+	word-wrap: normal !important; /* Many screen reader and browser combinations announce broken words as they would appear visually. */
+}
+.screen-reader-text:focus {
+	background-color: #f1f1f1;
+	border-radius: 3px;
+	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+	clip: auto !important;
+	color: #21759b;
+	display: block;
+	font-size: 14px;
+	font-size: 0.875rem;
+	font-weight: bold;
+	height: auto;
+	left: 5px;
+	line-height: normal;
+	padding: 15px 23px 14px;
+	text-decoration: none;
+	top: 5px;
+	width: auto;
+	z-index: 100000; /* Above WP toolbar. */
+}
+/* Do not show the outline on the skip link target. */
+#content[tabindex="-1"]:focus {
+	outline: 0;
+}
+
+/*HEADER*/
+.top-header   {
+	background-color: #319c9b;
+	height: 40px;
+	line-height: 2;
+}
+.telefon img {
+	width: 17px;
+	height: 17px;
+}
+.ml-10 {
+	padding-left: 10px;
+	color: #87eae6;
+	font-size: 20px;
+}
+.social>a {
+	width: 18px;
+	height: 40px;
+	display: inline-block;
+	background: url('./assets/images/social.png') no-repeat;
+	margin-right: 20px;
+}
+.social>a:last-child {
+	margin-right: 0;
+}
+.social .twitter {
+	background-position: left center;
+}
+.social .facebook {
+	background-position: center;
+}
+.social .google {
+	background-position: right center;
+}
+.middle-header {
+	height: 90px;
+	background-color: #27ada8;
+	color: #e3eef3;
+}
+.middle-header .header-logo a {
+	display: inline-block;
+}
+.middle-header a {
+	display: block;
+	color: #e3eef3;
+	font-size: 18px;
+	text-decoration: none;
+}
+.main-navigation li {
+	width: 98px;
+	line-height: 4.5;
+	list-style: none;
+	display: inline-block;
+}
+.main-navigation li:last-child {
+	text-align: right;
+}
+.main-navigation a:hover {
+	border-top: 2px solid #1c7271;
+	color: #1c7271;
+}
+.nameorg {
+	font-size: 24px;
+	line-height: 3.5;
+	margin-left: 10px;
+}
+@media screen and (min-width: 37.5em) {
+	.menu-toggle {
+		display: none;
+	}
+	.main-navigation ul {
+		display: inline-block;
+	}
+}
+.bottom-header {
+	background-color: #319c9b;
+	color: #e3eef3;
+}
+.bottom-header h1 {
+	font-size: 60px;
+	padding: 145px 0 45px;
+	margin: 0;
+	line-height: 70px;
+}
+.bottom-header p {
+	font-family: 'Cardo', serif;
+	font-size: 21px;
+	padding-bottom: 60px;
+	line-height: 36px;
+	margin: 0;
+}
+.header-button {
+	width: 165px;
+	height: 50px;
+	background-color: #24a19f;
+	color: #e3eef3;
+	border: none;
+	border-radius: 30px;
+	box-shadow: 0 1px 1px 2px #1c7271;
+	margin-bottom: 150px;
+	cursor: pointer;
+}
+
+/*FRONT_PAGE*/
+.main-site {
+
+}
+
+/*
