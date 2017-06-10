@@ -7,6 +7,12 @@
  * @package verso-medical
  */
 
+/*удаляем странный margin 32px*/
+add_action('get_header', 'remove_admin_login_header');
+
+function remove_admin_login_header() {
+    remove_action('wp_head', '_admin_bar_bump_cb');
+}
 /*подключаем логотип*/
 
 function themename_custom_logo_setup() {
@@ -121,24 +127,34 @@ add_action( 'widgets_init', 'verso_medical_widgets_init' );
 /**
  * Enqueue scripts and styles.
  */
-function verso_medical_scripts() {                   /**загружаемые стили и скрипты**/
+function my_scripts_method() { /**загружаемые скрипты**/
     wp_deregister_script( 'jquery' );
-	wp_register_script( 'jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js',array(), '3.2.1', true );
+		wp_register_script( 'jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js',array(), '3.2.1', true );
     wp_register_script( 'tether', 'https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js', array( 'jquery' ), '3.3.7', true );
     wp_register_script( 'bootstrap.min', get_template_directory_uri() . '/assets/js/bootstrap.min.js', array( 'jquery' ), '4.0.0', true );
-    wp_register_style( 'bootstrap-style.min', get_template_directory_uri() . '/assets/css/bootstrap-style.min.css', NULL, '4.0.0', 'all' );
-    wp_register_style( 'bootstrap-grid.min', get_template_directory_uri() . '/assets/css/bootstrap-grid.min.css', NULL, '4.0.0', 'all' );
-    wp_enqueue_style( 'bootstrap-style.min' );
-    wp_enqueue_style( 'bootstrap-grid.min' );
-    wp_enqueue_style( 'style', get_stylesheet_uri() );
+    wp_register_script( 'jquery.fancybox.min', get_template_directory_uri() . '/assets/js/jquery.fancybox.min.js', array( 'jquery' ), false, true );
+    wp_register_script( 'script', get_template_directory_uri() . '/assets/js/script.js', array( 'jquery' ), false, true );
     wp_enqueue_script( 'jquery' );
     wp_enqueue_script( 'tether' );
+    wp_enqueue_script( 'jquery.fancybox.min' );
     wp_enqueue_script( 'bootstrap.min' );
-	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
-		wp_enqueue_script( 'comment-reply' );
-	}
-}
-add_action( 'wp_enqueue_scripts', 'verso_medical_scripts' );  /**загружаем стили и скрипты**/
+    wp_enqueue_script( 'script' );
+   }
+
+/**загружаемые стили**/
+function theme_name_styles() {
+    wp_register_style( 'bootstrap-style.min', get_template_directory_uri() . '/assets/css/bootstrap-style.min.css', NULL, '4.0.0', 'all' );
+    wp_register_style( 'bootstrap-grid.min', get_template_directory_uri() . '/assets/css/bootstrap-grid.min.css', NULL, '4.0.0', 'all' );
+    wp_register_style( 'jquery.fancybox.min', get_template_directory_uri() . '/assets/css/jquery.fancybox.min.css', NULL, '4.0.0', 'all' );
+    wp_enqueue_style( 'bootstrap-style.min' );
+    wp_enqueue_style( 'bootstrap-grid.min' );
+    wp_enqueue_style( 'jquery.fancybox.min' );
+    wp_enqueue_style( 'style', get_stylesheet_uri() );
+
+  }
+  /**загружаем стили и скрипты**/
+add_action( 'wp_enqueue_scripts', 'my_scripts_method' );
+add_action( 'wp_enqueue_scripts','theme_name_styles' );
 
 
 /**

@@ -11,7 +11,10 @@ Text Domain: verso-medical
 Tags:
 */
 
-
+html {
+	margin: 0;
+	padding: 0;
+}
 body {
 	padding: 0;
 	margin: 0;
@@ -55,6 +58,7 @@ body {
 
 /*HEADER*/
 .top-header   {
+	margin: 0;
 	background-color: #319c9b;
 	height: 40px;
 	line-height: 2;
@@ -101,6 +105,9 @@ body {
 	font-size: 18px;
 	text-decoration: none;
 }
+.main-navigation ul {
+	float: right;
+}
 .main-navigation li {
 	width: 98px;
 	line-height: 4.5;
@@ -127,20 +134,36 @@ body {
 		display: inline-block;
 	}
 }
+.carousel-caption {
+	width: 500px;
+}
+.carousel-indicators {
+	bottom: 130px;
+	left: -290px;
+}
+.carousel-indicators .active {
+	background-color: #6117ec!important;
+}
+.carousel-indicators li {
+	background-color: #1c7271;
+}
 .bottom-header {
-	background-color: #319c9b;
-	color: #e3eef3;
+	background-color: #6117ec;
+	width: 100%;
+	height: 510px;
 }
 .bottom-header h1 {
+	color: #6117ec;
 	font-size: 60px;
-	padding: 145px 0 45px;
+	padding: 145px 0 25px;
 	margin: 0;
 	line-height: 70px;
 }
 .bottom-header p {
+	color: #6117ec;
 	font-family: 'Cardo', serif;
 	font-size: 21px;
-	padding-bottom: 60px;
+	padding-bottom: 30px;
 	line-height: 36px;
 	margin: 0;
 }
@@ -157,8 +180,162 @@ body {
 }
 
 /*FRONT_PAGE*/
-.main-site {
-
+.one-block {
+	height: 100px;
+	background-color: #ffffff;
 }
+.two-block {
+	height: 500px;
+}
+.white-block {
+	height: 500px;
+	background-color: #ffffff;
+}
+.blue-block {
+	height: 500px;
+	background-color: #c7e6e9;
+}
+.height {
+	height: 0;
+}
+.about-block {
+	height: 600px;
+	padding-left: 60px;
+	background-color: #f7ffff;
+	margin-top: -750px;
+	box-shadow: 3px 2px 15px 1px #d4d3dc;
+	color: #239e9d;
+}
+.about-block h2 {
+	padding: 50px 0 15px;
+}
+.about-block h1 {
+	padding-bottom: 15px;
+}
+.about-block p {
+	font-size: 18px;
+}
+.table-about td {
+	font-size: 18px;
+	border-top: none;
+	padding-top: 3px;
+}
+.table-about td:before {
+	content: url('./assets/images/list-style.png');
+	padding-right: 15px;
+}
+.services {
+	height: 586px;
+	background-color: #319c9b;
+}
+.work h2 {
+	padding: 176px 0 15px;
+	color: #8ad5d4;
+}
+.work h1 {
+	padding-bottom: 15px;
+	color: #f7ffff;
+}
+.work p {
+	font-size: 18px;
+	color: #8ad5d4;
+}
+.read-more {
+	color: #f7ffff;
+	font-size: 20px;
+}
+.features {
+	height: 586px;
+	margin-top: -370px;
+	background-color: #ffffff;
+	color: #319c9b;
+	box-shadow: 3px 2px 15px 1px #d4d3dc;
+}
+.features p {
+	font-size: 19px;
+	color: #8ad5d4;
+}
+.features-before-one {
+	height: 107px;
+	background: url('./assets/images/service-1.png') no-repeat center top;
+}
+.features-before-two {
+	height: 107px;
+	background: url('./assets/images/service-2.png') no-repeat center top;
+}
+.features-before-three {
+	height: 107px;
+	background: url('./assets/images/service-3.png') no-repeat center top;
+}
+.features .row:first-child {
+	padding-top: 90px;
+}
+.features-two .row:nth-child(2),
+.features-three .row:nth-child(3) {
+	padding-top: 30px;
+}
+.our-team {
+	height: 1490px;
+	padding-left: 60px;
+	background-color: #f6fff7;
+	color: #c6d7d5;
+}
+.team-info h2 {
+	padding: 380px 0 15px;
+}
+.team-info h1 {
+	padding-bottom: 15px;
+	color: #239e9d;
+}
+.team-info p {
+	font-size: 18px;
+}
+.team-foto-one {
+	margin-top: 300px;
+}
+.team-foto-two {
+	margin-top: 30px;
+}
+.thumb {
+	display: inline-block;
+	box-shadow: 3px 2px 15px 1px #d4d3dc;
+}
+.thumb-one,
+.thumb-three {
+	margin-right: 33px;
+}
+.people {
+	height: 460px;
+	background-color: #098886;
+}
+.reviews-top h2 {
+	padding: 100px 0 10px;
+	color: #8ad5d4;
+	font-size: 26px;
+}
+.reviews-top h1 {
+	padding-bottom: 46px;
+	color: #f7ffff;
+	font-size: 32px;
+}
+.reviews-bottom {
+	height: 400px;
+	background-color: #1eacac;
+}
+.reviews-bottom p {
+	padding-top: 90px;
+	color: #ffffff;
+	font-size: 30px;
+}
+
+
+
+
+
+
+
+
+
+
 
 /*
