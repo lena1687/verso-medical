@@ -74,7 +74,7 @@
 				</div>
 			</section>
 			<section class="bottom-header">
-				<div id="carouselExample" class="carousel slide" data-ride="carousel" data-interval="2000" data-pause="hover">
+				<div id="carouselExample" class="carousel slide" data-ride="carousel" data-interval="3000" data-pause="hover">
 				  <ol class="carousel-indicators">
 				    <li data-target="#carouselExample" data-slide-to="0" class="active"></li>
 				    <li data-target="#carouselExample" data-slide-to="1"></li>

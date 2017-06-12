@@ -133,7 +133,7 @@ get_header(); ?>
 				<div class="team-info">
 					<h2 class="text-left text-uppercase font-italic"><?php echo _('WHO WE ARE'); ?></h2>
 					<h1 class="text-left text-uppercase"><?php echo _('Meet our team'); ?></h1>
-					<p class="text-left"><?php echo _('Learn more about our clinic and feel free to contact us earn more about<br>Learn more about our clinic and feel free to contact us earn more about<br>Learn more about our clinic and feel free to contact us earn more and feel free to contact free to contact'); ?></p>
+					<p class="text-left"><?php echo _('Learn more about our clinic and feel free to contact us earn more <br>Learn more about our clinic and feel free to contact us earn more <br>Learn more about our clinic and feel free to contact us earn more and feel free to contact free to contact'); ?></p>
 				</div>
 			</div>
 			<div class="col-8">
@@ -182,14 +182,70 @@ get_header(); ?>
 		<div class="row">
 			<div class="col-8 offset-2">
 				<div class="reviews-bottom">
-					<p class="text-center font-italic"><?php echo _('Learn more about our clinic and feel free to contact us earn more about<br>Learn more about our clinic and feel free to contact us earn more about<br>Learn more about our clinic and feel free to contact free to contact'); ?></p>
+					<div class="row">
+						<div class="col-2">
+							<div class="reviews-middle quotes-1 text-right">
+								<img src="<?php bloginfo('template_url'); ?>/assets/images/quotes.png" alt="quotes-1">
+							</div>
+						</div>
+						<div class="col-2 offset-8">
+							<div class="reviews-middle quotes-2 text-left align-text-bottom">
+								<img src="<?php bloginfo('template_url'); ?>/assets/images/quotes-2.png" alt="quotes-2">
+							</div>
+						</div>
+					</div>
+					<p class="citation text-center font-italic"><?php echo _('Learn more about our clinic and feel free to contact us earn <br>Learn more about our clinic and feel free to contact us earn <br>Learn more about our clinic and feel free to contact'); ?></p>
+					<p class="sign text-center text-uppercase"><?php echo _('John Lengen'); ?></p>
 				</div>
 			</div>
 		</div>
 	</div>
 </section>
-
-
+<section class="gallary" id="gallary">
+	<div class="container">
+		<div class="row">
+			<div class="col-5">
+				<div class="foto foto-1">
+				</div>
+			</div>
+			<div class="col-3">
+				<div class="foto foto-2">
+				</div>
+			</div>
+			<div class="col-4">
+				<div class="gallary-info">
+					<h2 class="text-uppercase font-italic"><?php echo _('THE GALLARY'); ?></h2>
+					<h1 class="text-uppercase"><?php echo _('VIEW OUR CLINIC'); ?></h1>
+					<p><?php echo _('Learn more about our clinic and feel free to contact us earn <br>Learn more about our clinic and feel free to contact us earn<br>Learn more about our clinic and feel free to contact us earn more and feel <strong class="text-capitalize">free</strong> to contact free to contact'); ?></p>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-3">
+				<div class="foto foto-3">
+				</div>
+			</div>
+			<div class="col-5">
+				<div class="foto foto-4">
+				</div>
+			</div>
+			<div class="col-4">
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-6">
+				<div class="foto foto-5">
+				</div>
+			</div>
+			<div class="col-2">
+				<div class="foto foto-6">
+				</div>
+			</div>
+			<div class="col-4">
+			</div>
+		</div>
+	</div>
+</section>
 <?php
 
 get_footer();
