@@ -7,6 +7,7 @@
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
  * @package verso-medical
+ Template Name: Подвал
  */
 
 ?>
@@ -18,9 +19,15 @@
 			<div class="row">
 				<div class="col-4">
 					<div class="column-left">
-						<h1 class="text-uppercase"><?php echo _('ABOUT OUR CLINIC'); ?></h1>
-						<p><?php echo _('Learn more about our clinic and feel free to contact earn<br>Learn more about our clinic and feel free to contact us en<br>Learn more about our<br>'); ?></p>
-						<p><?php echo _('Learn more about our clinic and feel free to us earn<br>Learn more about our clinic and feel free to contact earn'); ?></p>
+						<h1 class="text-uppercase">
+							<?php the_field('caption-column-left', 76); ?>
+						</h1>
+						<p>
+							<?php the_field('text-column-left1', 76); ?>
+						</p>
+						<p>
+							<?php the_field('text-column-left2', 76); ?>
+						</p>
 					</div>
 				</div>
 				<div class="col-4">
@@ -50,9 +57,15 @@
 				</div>
 				<div class="col-4">
 					<div class="column-right">
-						<h1 class="text-uppercase"><?php echo _('GET IN TOUCH'); ?></h1>
-						<p><?php echo _('Learn more about our clinic and feel free to contact earn<br>Learn more about our clinic and feel free to contact us en<br>Learn more about our<br>'); ?></p>
-						<p><?php echo _('Learn more about our clinic and feel free to us earn<br>Learn more about our clinic and feel free to contact earn'); ?></p>
+						<h1 class="text-uppercase">
+							<?php the_field('caption-column-right', 76); ?>
+						</h1>
+						<p>
+							<?php the_field('text-column-right1', 76); ?>
+						</p>
+						<p>
+							<?php the_field('text-column-right2', 76); ?>
+						</p>
 					</div>
 				</div>
 			</div>
@@ -63,7 +76,9 @@
 			<div class="row clearfix">
 				<div class="col-6">
 					<div class="copyright float-left">
-						<p><?php echo _('Verso-template.<span>&#169;</span>Oxygenna,2017'); ?></p>
+						<p>
+							<?php the_field('copyright-field', 76); ?>
+						</p>
 					</div>
 				</div>
 				<div class="col-6">

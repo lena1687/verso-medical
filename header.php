@@ -1,7 +1,8 @@
 <?php
-/**
+/*
  * @package verso-medical
- */
+ Template Name: Шапка сайта
+*/
 ?>
 
 <!DOCTYPE html>
@@ -31,8 +32,12 @@
 						<div class="row">
 							<div class="col-6">
 								<div class="telefon text-left">
-									<img src="<?php bloginfo('template_url'); ?>/assets/images/tel.png" alt="tel">
-									<span class="ml-10"><?php echo _('8800555555'); ?></span>
+									<img src="<?php the_field('foto-tel', 39); ?>">
+									<span class="ml-10">
+										<?php the_field('tel', 39); ?>
+										<!-- Advanced Custom Fields - плагин,
+										tel - это название поля в произвольном поле; 39 - это ID страницы с админки! шаблон присединяем к странице, внизу шаблона заполняем произвольные поля - обновить (их нужно создать в пункте консоли Произвольные поля и присоединить к ним там определенный шаблон страницы )  -->
+									</span>
 								</div>
 							</div>
 							<div class="col-6">
@@ -57,7 +62,9 @@
 										    the_custom_logo();
 										}
 									?>
-									<span class="nameorg text-uppercase"><?php echo _('clinic'); ?></span>
+									<span class="nameorg text-uppercase">
+										<?php the_field('clinic', 39); ?>
+									</span>
 								</div>
 							</div>
 							<div class="col-9">
@@ -82,27 +89,45 @@
 				  </ol>
 				  <div class="carousel-inner" role="listbox">
 				    <div class="carousel-item active">
-				      <img class="d-block img-fluid" src="<?php bloginfo('template_url'); ?>/assets/images/vrash-1.jpg" alt="First slide">
+							<img class="d-block img-fluid" src="<?php the_field('foto-slide1', 39); ?>" alt="First slide">
 				      <div class="carousel-caption d-none d-md-block">
-								<h1 class="text-left text-uppercase"><?php echo _('We care about your<br> health, we care<br> about You'); ?></h1>
-								<p class="text-left"><?php echo _('Learn more about our clinic and<br> feel free to contact us.'); ?></p>
-								<button class="header-button text-uppercase text-center" type="submit"><?php echo _('book now'); ?></button>
+								<h1 class="text-left text-uppercase">
+									<?php the_field('caption-slider-1', 39); ?>
+								</h1>
+								<p class="text-left">
+									<?php the_field('text-slider-1', 39); ?>
+								</p>
+								<button class="header-button text-uppercase text-center" type="submit">
+									<?php the_field('button-1', 39); ?>
+								</button>
 					  	</div>
 				    </div>
 				    <div class="carousel-item">
-				      <img class="d-block img-fluid" src="<?php bloginfo('template_url'); ?>/assets/images/vrash-2.jpg" alt="Second slide">
+				    	<img class="d-block img-fluid" src="<?php the_field('foto-slide2', 39); ?>" alt="Second slide">
 				      <div class="carousel-caption d-none d-md-block">
-								<h1 class="text-left text-uppercase"><?php echo _('We care about your<br> health, we care<br> about You'); ?></h1>
-								<p class="text-left"><?php echo _('Learn more about our clinic and<br> feel free to contact us.'); ?></p>
-								<button class="header-button text-uppercase text-center" type="submit"><?php echo _('book now'); ?></button>
+								<h1 class="text-left text-uppercase">
+									<?php the_field('caption-slider-2', 39); ?>
+								</h1>
+								<p class="text-left">
+									<?php the_field('text-slider-2', 39); ?>
+								</p>
+								<button class="header-button text-uppercase text-center" type="submit">
+									<?php the_field('button-2', 39); ?>
+								</button>
 							</div>
 				    </div>
 				    <div class="carousel-item">
-				      <img class="d-block img-fluid" src="<?php bloginfo('template_url'); ?>/assets/images/vrash-3.jpg" alt="Third slide">
+				      <img class="d-block img-fluid" src="<?php the_field('foto-slide3', 39); ?>" alt="Third slide">
 				      <div class="carousel-caption d-none d-md-block">
-								<h1 class="text-left text-uppercase"><?php echo _('We care about your<br> health, we care<br> about You'); ?></h1>
-								<p class="text-left"><?php echo _('Learn more about our clinic and<br> feel free to contact us.'); ?></p>
-								<button class="header-button text-uppercase text-center" type="submit"><?php echo _('book now'); ?></button>
+								<h1 class="text-left text-uppercase">
+									<?php the_field('caption-slider-3', 39); ?>
+								</h1>
+								<p class="text-left">
+									<?php the_field('text-slider-3', 39); ?>
+								</p>
+								<button class="header-button text-uppercase text-center" type="submit">
+									<?php the_field('button-3', 39); ?>
+								</button>
 							</div>
 				    </div>
 				  </div>
