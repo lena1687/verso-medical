@@ -13,10 +13,6 @@
 		<meta name="keywords" content="verso-medical">
 		<meta name="description" content="site for verso-medical">
 		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
-		<title>
-			<?php echo wp_get_document_title(); ?>
-			<?php bloginfo('name'); ?>
-		</title>
 		<link href="https://fonts.googleapis.com/css?family=Pathway+Gothic+One" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Cardo" rel="stylesheet">
 		<?php wp_head(); ?>
@@ -32,9 +28,9 @@
 						<div class="row">
 							<div class="col-6">
 								<div class="telefon text-left">
-									<img src="<?php the_field('foto-tel', 39); ?>">
+								<img src="<?php acfcheck("foto-tel", 39);?>">
 									<span class="ml-10">
-										<?php the_field('tel', 39); ?>
+									<?php acfcheck("tel", 39);?>
 										<!-- Advanced Custom Fields - плагин,
 										tel - это название поля в произвольном поле; 39 - это ID страницы с админки! шаблон присединяем к странице, внизу шаблона заполняем произвольные поля - обновить (их нужно создать в пункте консоли Произвольные поля и присоединить к ним там определенный шаблон страницы )  -->
 									</span>
@@ -63,16 +59,32 @@
 										}
 									?>
 									<span class="nameorg text-uppercase">
-										<?php the_field('clinic', 39); ?>
+									<?php acfcheck("clinic", 39);?>
 									</span>
 								</div>
 							</div>
 							<div class="col-9">
 								<div class="text-center text-uppercase list-unstyled">
 									<!-- #site-navigation -->
-									<nav id="site-navigation" class="main-navigation" role="navigation">
-										<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'verso-medical' ); ?></button>
-										<?php wp_nav_menu( array( 'theme_location' => 'menu-1', 'menu_id' => 'primary-menu' ) ); ?>
+									<nav class="navbar navbar-toggleable-md navbar-light bg-faded float-right">
+										<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#bs4navbar" aria-controls="bs4navbar" aria-expanded="false" aria-label="Toggle navigation">
+											<span class="navbar-text">MENU</span>
+										 	<span class="navbar-toggler-icon"></span>
+										</button>
+										<?php
+											wp_nav_menu(array(
+											 'menu'            => 'menu-1',
+											 'theme_location'  => 'menu-1',
+											 'container'       => 'div',
+											 'container_id'    => 'bs4navbar',
+											 'container_class' => 'collapse navbar-collapse',
+											 'menu_id'         => false,
+											 'menu_class'      => 'navbar-nav mr-auto',
+											 'depth'           => 2,
+											 'fallback_cb'     => 'bs4navwalker::fallback',
+											 'walker'          => new bs4navwalker()
+											));
+										?>
 									</nav>
 								</div>
 							</div>
@@ -89,44 +101,44 @@
 				  </ol>
 				  <div class="carousel-inner" role="listbox">
 				    <div class="carousel-item active">
-							<img class="d-block img-fluid" src="<?php the_field('foto-slide1', 39); ?>" alt="First slide">
+							<img class="d-block img-fluid" src="<?php acfcheck("foto-slide1", 39);?>" alt="First slide">
 				      <div class="carousel-caption d-none d-md-block">
 								<h1 class="text-left text-uppercase">
-									<?php the_field('caption-slider-1', 39); ?>
+									<?php acfcheck("caption-slider-1", 39);?>
 								</h1>
 								<p class="text-left">
-									<?php the_field('text-slider-1', 39); ?>
+									<?php acfcheck("text-slider-1", 39);?>
 								</p>
 								<button class="header-button text-uppercase text-center" type="submit">
-									<?php the_field('button-1', 39); ?>
+									<?php acfcheck("button-1", 39);?>
 								</button>
 					  	</div>
 				    </div>
 				    <div class="carousel-item">
-				    	<img class="d-block img-fluid" src="<?php the_field('foto-slide2', 39); ?>" alt="Second slide">
+				    	<img class="d-block img-fluid" src="<?php acfcheck("foto-slide2", 39);?>" alt="Second slide">
 				      <div class="carousel-caption d-none d-md-block">
 								<h1 class="text-left text-uppercase">
-									<?php the_field('caption-slider-2', 39); ?>
+									<?php acfcheck("caption-slider-2", 39);?>
 								</h1>
 								<p class="text-left">
-									<?php the_field('text-slider-2', 39); ?>
+									<?php acfcheck("text-slider-2", 39);?>
 								</p>
 								<button class="header-button text-uppercase text-center" type="submit">
-									<?php the_field('button-2', 39); ?>
+									<?php acfcheck("button-2", 39);?>
 								</button>
 							</div>
 				    </div>
 				    <div class="carousel-item">
-				      <img class="d-block img-fluid" src="<?php the_field('foto-slide3', 39); ?>" alt="Third slide">
+				      <img class="d-block img-fluid" src="<?php acfcheck("foto-slide3", 39);?>" alt="Third slide">
 				      <div class="carousel-caption d-none d-md-block">
 								<h1 class="text-left text-uppercase">
-									<?php the_field('caption-slider-3', 39); ?>
+									<?php acfcheck("caption-slider-3", 39);?>
 								</h1>
 								<p class="text-left">
-									<?php the_field('text-slider-3', 39); ?>
+									<?php acfcheck("text-slider-3", 39);?>
 								</p>
 								<button class="header-button text-uppercase text-center" type="submit">
-									<?php the_field('button-3', 39); ?>
+									<?php acfcheck("button-3", 39);?>
 								</button>
 							</div>
 				    </div>

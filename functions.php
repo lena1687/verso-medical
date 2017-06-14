@@ -6,6 +6,16 @@
  *
  * @package verso-medical
  */
+/*функция для проверки acf: включен ли он, если да - то выводит значение из админки*/
+
+function acfcheck($name_field, $id) {
+    $error = "Plagin deactive";
+    if(function_exists("get_field")){
+        return the_field($name_field, $id);
+    } else {
+        echo $error;
+    }
+}
 
 /*удаляем странный margin 32px*/
 add_action('get_header', 'remove_admin_login_header');
@@ -70,6 +80,13 @@ function verso_medical_setup() {
 	register_nav_menus( array(
 		'menu-1' => esc_html__( 'Primary', 'verso-medical' ),
 	) );
+/**
+ * регистрация меню с гитхаб пример https://github.com/dupkey/bs4navwalker
+ */
+require get_template_directory() . '/inc/bs4navwalker/bs4navwalker.php';
+
+
+
 
 	/*
 	 * Switch default core markup for search form, comment form, and comments
@@ -130,7 +147,7 @@ add_action( 'widgets_init', 'verso_medical_widgets_init' );
  */
 function my_scripts_method() { /**загружаемые скрипты**/
     wp_deregister_script( 'jquery' );
-		wp_register_script( 'jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js',array(), '3.2.1', true );
+		wp_register_script( 'jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js',array(), '3.2.1', true );
     wp_register_script( 'tether', 'https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js', array( 'jquery' ), '3.3.7', true );
     wp_register_script( 'bootstrap.min', get_template_directory_uri() . '/assets/js/bootstrap.min.js', array( 'jquery' ), '4.0.0', true );
     wp_register_script( 'jquery.fancybox.min', get_template_directory_uri() . '/assets/js/jquery.fancybox.min.js', array( 'jquery' ), false, true );
@@ -178,10 +195,7 @@ require get_template_directory() . '/inc/extras.php';
  */
 require get_template_directory() . '/inc/customizer.php';
 
-/**
- * Load Jetpack compatibility file.
- */
-require get_template_directory() . '/inc/jetpack.php';
+
 
 
 

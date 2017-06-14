@@ -20,19 +20,21 @@
 				<div class="col-4">
 					<div class="column-left">
 						<h1 class="text-uppercase">
-							<?php the_field('caption-column-left', 76); ?>
+							<?php acfcheck('caption-column-left', 76);?>
 						</h1>
 						<p>
-							<?php the_field('text-column-left1', 76); ?>
+							<?php acfcheck('text-column-left1', 76);?>
 						</p>
 						<p>
-							<?php the_field('text-column-left2', 76); ?>
+							<?php acfcheck('text-column-left2', 76);?>
 						</p>
 					</div>
 				</div>
 				<div class="col-4">
 					<div class="column-center">
-						<h1 class="text-uppercase"><?php echo _('RECENT POSTS'); ?></h1>
+						<h1 class="text-uppercase">
+							<?php acfcheck('recent', 76);?>
+						</h1>
 						<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 							<div class="content clearfix">
 								<div class="post-thumbnail float-left">
@@ -58,13 +60,13 @@
 				<div class="col-4">
 					<div class="column-right">
 						<h1 class="text-uppercase">
-							<?php the_field('caption-column-right', 76); ?>
+							<?php acfcheck('caption-column-right', 76);?>
 						</h1>
 						<p>
-							<?php the_field('text-column-right1', 76); ?>
+							<?php acfcheck('text-column-right1', 76);?>
 						</p>
 						<p>
-							<?php the_field('text-column-right2', 76); ?>
+							<?php acfcheck('text-column-right2', 76);?>
 						</p>
 					</div>
 				</div>
@@ -77,7 +79,7 @@
 				<div class="col-6">
 					<div class="copyright float-left">
 						<p>
-							<?php the_field('copyright-field', 76); ?>
+							<?php acfcheck('copyright-field', 76);?>
 						</p>
 					</div>
 				</div>
