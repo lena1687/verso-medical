@@ -15,7 +15,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
 		<link href="https://fonts.googleapis.com/css?family=Pathway+Gothic+One" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Cardo" rel="stylesheet">
-		<?php wp_head(); ?>
+		<?php wp_head(); ?>   <!--Это зацепка, позволяющая WordPress прикреплять определенную функциональность к заголовку сайта, она также используется плагинами. -->
 	</head>
 	<body <?php body_class(); ?>>
 		<header id="masthead" class="site-header" role="banner">

@@ -5,7 +5,7 @@
  * @package verso-medical
  */
 
-get_header(); ?>
+get_header(); ?> <!--функция автоматич включ header.php-->
 <section class="about m-0" id="about">
 	<div class="container-fluid p-0">
 		<div class="row">
@@ -297,4 +297,4 @@ get_header(); ?>
 </section>
 <?php
 
-get_footer();
+get_footer(); //функция "прикрепляем" подвал сайта
